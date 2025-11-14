@@ -1,0 +1,24 @@
+# This file relates to internal XMOS infrastructure and should be ignored by external users
+---
+lib_name: lib_xassert
+project: '{{lib_name}}'
+title: '{{lib_name}}: Assertions library'
+version: 4.3.1
+
+documentation:
+  exclude_patterns_path: doc/exclude_patterns.inc
+  substitutions_path: doc/substitutions.inc
+  root_doc: doc/rst/lib_xassert.rst
+  linkcheck_ignore_regex: ['']
+  cognidox_part_number: XM-006382-UG
+  pdfs:
+    doc/rst/lib_xassert.rst:
+      pdf_title: '{{title}}'
+      pdf_filename: '{{lib_name}}_v{{version}}'
+    README.rst:
+      pdf_title: '{{title}} (README)'
+      pdf_filename: '{{lib_name}}_v{{version}}_readme'
+      pdf_short: yes
+software:
+  cognidox_part_number: XM-007507-SM
+

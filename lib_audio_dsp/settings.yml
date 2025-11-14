@@ -1,0 +1,40 @@
+# This file relates to internal XMOS infrastructure and should be ignored by external users
+
+lib_name: lib_audio_dsp
+project: '{{lib_name}}'
+title: '{{lib_name}}: Audio DSP Library'
+version: 1.4.0
+
+documentation:
+  run_before: |
+    python doc/autogen.py
+  exclude_patterns_path: doc/exclude_patterns.inc
+  substitutions_path: doc/substitutions.inc
+  linkcheck_ignore_regex: 
+    - ".*127\\.0\\.0\\.1.*"
+    - ".*lib_audio_dsp"  # this repo is private
+  root_doc: doc/rst/lib_audio_dsp.rst
+  cognidox_part_number: XM-015103-UG
+  use_numpydoc: true
+  doxygen_projects:
+    lib_audio_dsp:
+      doxyfile_path: doc/Doxyfile.inc
+      doxy_overrides: |
+        GENERATE_HTML = yes
+        GENERATE_LATEX = yes
+        WARN_AS_ERROR = yes
+        WARN_IF_UNDOCUMENTED = no
+  pdfs:
+    doc/rst/lib_audio_dsp.rst:
+      pdf_title: '{{title}}'
+      pdf_filename: '{{lib_name}}_v{{version}}'
+    README.rst:
+      pdf_title: '{{title}} (README)'
+      pdf_filename: '{{lib_name}}_v{{version}}_readme'
+      pdf_short: yes
+  latex_toc_depth: 3
+  latex_secnum_depth: 3
+  extra_sphinx_opts: [-W]
+
+software:
+  cognidox_part_number: XM-015102-SM

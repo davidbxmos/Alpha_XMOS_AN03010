@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.21)
+include($ENV{XMOS_CMAKE_PATH}/xcommon.cmake)
+project(lib_sw_pll_examples)
+add_subdirectory(app_i2s_slave_lut)
+add_subdirectory(app_simple_lut)
+add_subdirectory(app_simple_sdm)

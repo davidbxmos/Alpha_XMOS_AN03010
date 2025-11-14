@@ -1,0 +1,26 @@
+# This file relates to internal XMOS infrastructure and should be ignored by external users
+
+an_number: an03010
+an_number_upper: AN03010
+project: '{{an_number}}'
+title: '{{an_number_upper}}: Adding functionality to an existing XCORE application'
+version: 1.0.0
+
+documentation:
+  exclude_patterns_path: doc/exclude-patterns.inc
+  root_doc: doc/rst/an03010.rst
+  linkcheck_ignore_regex: [".*an0000.*"]
+  cognidox_part_number: XM-000000-AN
+  pdfs:
+    doc/rst/an03010.rst:
+      pdf_title: '{{title}}'
+      pdf_filename: '{{an_number}}_v{{version}}'
+      pdf_short: yes
+    README.rst:
+      pdf_title: '{{title}} (README)'
+      pdf_filename: '{{an_number}}_v{{version}}_readme'
+      pdf_short: yes
+  latex_secnum_depth: 4
+
+software:
+  cognidox_part_number: XM-000000-SM

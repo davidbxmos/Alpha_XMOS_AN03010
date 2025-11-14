@@ -1,0 +1,26 @@
+Start bit received
+Byte received: 0x66
+Speed = \d+ Kbps
+Master write transaction started, device address=0x33
+Sending ack
+Byte received: 0x99
+Speed = \d+ Kbps
+Sending ack
+Repeated start bit received
+Byte received: 0x66
+Speed = \d+ Kbps
+Master write transaction started, device address=0x33
+Sending ack
+Byte received: 0x99
+Speed = \d+ Kbps
+Sending ack
+Stop bit received
+Start bit received
+Byte received: 0x44
+Speed = \d+ Kbps
+Master write transaction started, device address=0x22
+Sending ack
+Byte received: 0x88
+Speed = \d+ Kbps
+Sending ack
+Stop bit received

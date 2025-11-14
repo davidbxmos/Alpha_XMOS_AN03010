@@ -1,0 +1,30 @@
+module:
+  cascaded_biquads_16:
+    left_shift:
+      type: int
+      size: 16
+      help: >
+        The coefficient shift applied to the output of each biquad in the cascade.
+        The shifts should be in the same format as specified in the individual
+        biquad.
+    filter_coeffs_lower:
+      type: int32_t
+      size: 40
+      attribute: DWORD_ALIGNED
+      help: >
+        The normalised biquad filter coefficients for the first 8 biquads in the
+        cascade as an array of [8][5], with 5 coefficients for 8
+        biquads. The coefficients should be in the same format as
+        specified in the individual biquad. See :ref:`biquad_helpers`.
+    filter_coeffs_upper:
+      type: int32_t
+      size: 40
+      attribute: DWORD_ALIGNED
+      help: >
+        The normalised biquad filter coefficients for the last 8 biquads in the
+        cascade as an array of [8][5], with 5 coefficients for up to 8
+        biquads. The coefficients should be in the same format as
+        specified in the individual biquad. See :ref:`biquad_helpers`.
+includes:
+  - "stdint.h"
+  - "xmath/api.h"
